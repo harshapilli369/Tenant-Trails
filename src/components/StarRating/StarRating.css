@@ -1,0 +1,21 @@
+.star-rating {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.stars-empty {
+  color: #d1d5db;
+  letter-spacing: 1px;
+}
+
+.stars-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #f59e0b;
+  letter-spacing: 1px;
+}

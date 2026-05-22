@@ -1,0 +1,46 @@
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  padding: 40px 48px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  max-width: 220px;
+}
+
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+
+.feature-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.feature-description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    padding: 32px 24px 64px;
+  }
+}
