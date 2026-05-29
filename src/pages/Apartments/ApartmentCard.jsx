@@ -1,10 +1,11 @@
 import StarRating from '../../components/StarRating/StarRating';
 import './ApartmentCard.css';
 
-function ApartmentCard({ name, address, neighborhood, rating, reviewCount, tags, imageBg }) {
+function ApartmentCard({ name, address, neighborhood, rating, reviewCount, tags, image }) {
   return (
     <div className="apt-card">
-      <div className="apt-card-image" style={{ background: imageBg }}>
+      <div className="apt-card-image">
+        <img src={image} alt={name} className="apt-card-img" />
         <div className="apt-rating-badge">
           <span className="apt-rating-star">⭐</span>
           <span className="apt-rating-value">{rating.toFixed(1)}</span>

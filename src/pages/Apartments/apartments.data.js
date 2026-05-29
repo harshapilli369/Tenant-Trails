@@ -7,7 +7,7 @@ const apartments = [
     rating: 5.0,
     reviewCount: 1,
     tags: ['No AI summary yet'],
-    imageBg: 'linear-gradient(160deg, #7ec8a0 0%, #3a8c5e 60%, #2d6b47 100%)',
+    image: '/TheMarlstone.webp',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const apartments = [
     rating: 4.5,
     reviewCount: 2,
     tags: ['Well maintained', 'Quiet', 'Expensive'],
-    imageBg: 'linear-gradient(160deg, #4a6fa5 0%, #2c4a7c 60%, #1a2f52 100%)',
+    image: '/Park Victoria.jpg',
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const apartments = [
     rating: 3.7,
     reviewCount: 3,
     tags: ['Good location', 'Parking limited', 'Aging building'],
-    imageBg: 'linear-gradient(160deg, #8fa89a 0%, #5a7a6a 60%, #3d5a4c 100%)',
+    image: '/Le Marchant Towers.jpg',
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const apartments = [
     rating: 3.3,
     reviewCount: 3,
     tags: ['Elevator issues', 'Great views', 'Security concerns'],
-    imageBg: 'linear-gradient(160deg, #4a4a5a 0%, #2a2a38 60%, #1a1a25 100%)',
+    image: '/Fenwick Tower.webp',
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const apartments = [
     rating: 2.5,
     reviewCount: 4,
     tags: ['No AI summary yet'],
-    imageBg: 'linear-gradient(160deg, #c07850 0%, #8a4e28 60%, #5e3018 100%)',
+    image: '/Southpoint Apartments.jpg',
   },
 ];
 

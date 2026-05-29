@@ -1,8 +1,15 @@
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import './AppNavbar.css';
 
-function AppNavbar({ user = { name: 'Alex', initials: 'AM' } }) {
+function AppNavbar({ searchQuery = '', onSearchChange }) {
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
+
+  function handleSignOut() {
+    logout();
+    navigate('/signin');
+  }
 
   return (
     <nav className="app-navbar">
@@ -18,14 +25,20 @@ function AppNavbar({ user = { name: 'Alex', initials: 'AM' } }) {
           <input
             type="text"
             placeholder="Search apartments by address or neighbourhood..."
+            value={searchQuery}
+            onChange={(e) => onSearchChange && onSearchChange(e.target.value)}
           />
         </div>
       </div>
 
       <div className="app-navbar-right">
-        <div className="user-avatar">{user.initials}</div>
-        <span className="user-name">{user.name}</span>
-        <button className="signout-btn" onClick={() => navigate('/signin')}>
+        {user && (
+          <>
+            <div className="user-avatar">{user.initials}</div>
+            <span className="user-name">{user.name.split(' ')[0]}</span>
+          </>
+        )}
+        <button className="signout-btn" onClick={handleSignOut}>
           Sign out
         </button>
       </div>

@@ -1,4 +1,4 @@
-.signin-page {
+.signup-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #eef2ff 0%, #f0f9ff 50%, #f5f3ff 100%);
   display: flex;
@@ -7,7 +7,7 @@
   padding: 24px;
 }
 
-.signin-card {
+.signup-card {
   background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
@@ -16,7 +16,7 @@
   max-width: 420px;
 }
 
-.signin-logo {
+.signup-logo {
   font-size: 24px;
   font-weight: 800;
   color: #2563eb;
@@ -24,14 +24,14 @@
   letter-spacing: -0.5px;
 }
 
-.signin-subtitle {
+.signup-subtitle {
   font-size: 14px;
   color: #64748b;
   margin-bottom: 28px;
   line-height: 1.5;
 }
 
-.signin-form {
+.signup-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -69,7 +69,32 @@
   color: #9ca3af;
 }
 
-.signin-btn {
+.form-group input.input-error {
+  border-color: #dc2626;
+}
+
+.form-group input.input-error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 2px;
+}
+
+.form-server-error {
+  font-size: 13px;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+}
+
+.signup-btn {
   margin-top: 8px;
   width: 100%;
   padding: 12px;
@@ -83,75 +108,28 @@
   transition: background-color 0.2s;
 }
 
-.signin-btn:hover {
+.signup-btn:hover {
   background-color: #1d4ed8;
 }
 
-.signin-footer {
+.signup-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.signup-footer {
   margin-top: 16px;
   text-align: center;
   font-size: 13px;
   color: #6b7280;
 }
 
-.signin-link {
+.signup-link {
   color: #2563eb;
   font-weight: 500;
   text-decoration: none;
 }
 
-.signin-link:hover {
+.signup-link:hover {
   text-decoration: underline;
-}
-
-.demo-hint {
-  margin-top: 12px;
-  width: 100%;
-  padding: 10px 14px;
-  background-color: #f0f4ff;
-  color: #4b5563;
-  border: none;
-  border-radius: 8px;
-  font-size: 13px;
-  cursor: pointer;
-  text-align: center;
-  transition: background-color 0.2s;
-}
-
-.demo-hint:hover {
-  background-color: #e0e8ff;
-}
-
-.demo-hint strong {
-  color: #2563eb;
-}
-
-.form-error {
-  font-size: 12px;
-  color: #dc2626;
-  margin-top: 2px;
-}
-
-.form-group input.input-error {
-  border-color: #dc2626;
-}
-
-.form-group input.input-error:focus {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
-}
-
-.form-server-error {
-  font-size: 13px;
-  color: #dc2626;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 8px;
-  padding: 10px 14px;
-  text-align: center;
-}
-
-.signin-btn:disabled {
-  opacity: 0.65;
-  cursor: not-allowed;
 }

@@ -10,12 +10,21 @@ const sortOptions = ['Highest Rated', 'Most Reviews', 'Lowest Rated'];
 function Apartments() {
   const [neighborhood, setNeighborhood] = useState('All Neighbourhoods');
   const [sort, setSort] = useState('Highest Rated');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const totalReviews = apartments.reduce((sum, a) => sum + a.reviewCount, 0);
   const uniqueNeighborhoods = [...new Set(apartments.map((a) => a.neighborhood))].length;
 
+  const query = searchQuery.toLowerCase().trim();
+
   const filtered = apartments
     .filter((a) => neighborhood === 'All Neighbourhoods' || a.neighborhood === neighborhood)
+    .filter((a) =>
+      !query ||
+      a.name.toLowerCase().includes(query) ||
+      a.address.toLowerCase().includes(query) ||
+      a.neighborhood.toLowerCase().includes(query)
+    )
     .sort((a, b) => {
       if (sort === 'Highest Rated') return b.rating - a.rating;
       if (sort === 'Lowest Rated') return a.rating - b.rating;
@@ -24,7 +33,7 @@ function Apartments() {
 
   return (
     <div className="apartments-page">
-      <AppNavbar />
+      <AppNavbar searchQuery={searchQuery} onSearchChange={setSearchQuery} />
 
       <main className="apartments-main">
         <div className="apartments-header">
@@ -69,9 +78,13 @@ function Apartments() {
         </div>
 
         <div className="apartments-grid">
-          {filtered.map((apt) => (
-            <ApartmentCard key={apt.id} {...apt} />
-          ))}
+          {filtered.length > 0 ? (
+            filtered.map((apt) => (
+              <ApartmentCard key={apt.id} {...apt} />
+            ))
+          ) : (
+            <p className="no-results">No apartments match your search.</p>
+          )}
         </div>
       </main>
     </div>
