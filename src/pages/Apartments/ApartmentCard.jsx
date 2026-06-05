@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
 import StarRating from '../../components/StarRating/StarRating';
 import './ApartmentCard.css';
 
-function ApartmentCard({ name, address, neighborhood, rating, reviewCount, tags, image }) {
+function ApartmentCard({ id, name, address, neighborhood, rating, reviewCount, tags, image }) {
   return (
+    <Link to={`/apartment/${id}`} className="apt-card-link">
     <div className="apt-card">
       <div className="apt-card-image">
         <img src={image} alt={name} className="apt-card-img" />
@@ -31,6 +33,7 @@ function ApartmentCard({ name, address, neighborhood, rating, reviewCount, tags,
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

@@ -8,6 +8,8 @@ import Features from './components/Features/Features';
 import SignIn from './pages/SignIn/SignIn';
 import SignUp from './pages/SignUp/SignUp';
 import Apartments from './pages/Apartments/Apartments';
+import ApartmentDetail from './pages/ApartmentDetail/ApartmentDetail';
+import Profile from './pages/Profile/Profile';
 
 function LandingPage() {
   return (
@@ -34,6 +36,22 @@ function App() {
             element={
               <ProtectedRoute>
                 <Apartments />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/apartment/:id"
+            element={
+              <ProtectedRoute>
+                <ApartmentDetail />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
               </ProtectedRoute>
             }
           />

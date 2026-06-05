@@ -71,6 +71,20 @@
   gap: 10px;
 }
 
+.user-profile-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  padding: 4px 6px;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.user-profile-link:hover {
+  background: #f3f4f6;
+}
+
 .user-avatar {
   width: 32px;
   height: 32px;

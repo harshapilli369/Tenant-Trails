@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './AppNavbar.css';
 
@@ -33,10 +33,10 @@ function AppNavbar({ searchQuery = '', onSearchChange }) {
 
       <div className="app-navbar-right">
         {user && (
-          <>
+          <Link to="/profile" className="user-profile-link">
             <div className="user-avatar">{user.initials}</div>
             <span className="user-name">{user.name.split(' ')[0]}</span>
-          </>
+          </Link>
         )}
         <button className="signout-btn" onClick={handleSignOut}>
           Sign out
