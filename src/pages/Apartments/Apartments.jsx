@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AppNavbar from '../../components/AppNavbar/AppNavbar';
 import ApartmentCard from './ApartmentCard';
-import apartments from './apartments.data';
+import { apartments } from '../../data/mockData';
 import './Apartments.css';
 
 const neighborhoods = ['All Neighbourhoods', 'Spring Garden', 'South End', 'West End', 'Downtown'];
